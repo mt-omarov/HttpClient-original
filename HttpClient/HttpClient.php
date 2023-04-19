@@ -44,9 +44,6 @@ final class HttpClient
             static $curlVersion = null;
             $curlVersion ??= curl_version();
 
-            define("CURL_VERSION_HTTP2", 65536);
-            define('DIRECTORY_SEPARATOR', "/");
-
             // HTTP/2 push crashes before curl 7.61
             if (0x073D00 > $curlVersion['version_number'] || !(\CURL_VERSION_HTTP2 & $curlVersion['features'])) {
                 return new AmpHttpClient($defaultOptions, null, $maxHostConnections, $maxPendingPushes);

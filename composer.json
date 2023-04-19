@@ -1,5 +1,4 @@
 {
-    "name": "Symfony/Component/HttpClient",
     "autoload": {
         "psr-4": { "Symfony\\Component\\HttpClient\\": "HttpClient", "Symfony\\Contracts\\HttpClient\\": "HttpClientContracts" }
     },
